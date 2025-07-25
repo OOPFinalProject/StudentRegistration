@@ -1,4 +1,4 @@
-package StudentRegistration.dao;
+package dao;
 
 import java.sql.Connection;
 import java.sql.Statement;
