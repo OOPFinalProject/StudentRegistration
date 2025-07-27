@@ -7,7 +7,7 @@ import util.UserGen;
 import java.util.InputMismatchException;
 import model.customExceptions.StudentNotCreatedException;
 
-public class AddStudents {
+public class addStudents {
     private Scanner scanner = new Scanner(System.in);
 
     public void show() {

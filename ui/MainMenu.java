@@ -1,5 +1,9 @@
 package ui;
 import java.util.Scanner;
+import ui.addStudents;
+import ui.addCourses;
+import ui.RegisterStudents;
+
 public class MainMenu{
     private Scanner scanner = new Scanner(System.in);
     public void show(){
@@ -17,13 +21,17 @@ public class MainMenu{
                     System.out.println("Logging Out");
                     return;
                 case "1":
-                    new AddStudents().show();
+                    new addStudents().show();
                     break;
-    
+                case "2":
+                    new addCourses().show();
+                    break;
+                case "3":
+                    new RegisterStudents().show();
+                    break;
 
                 default:
                     System.out.println("'Invalid Input'");
-
 
             }
         }
