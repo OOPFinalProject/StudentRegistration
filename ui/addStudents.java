@@ -1,7 +1,6 @@
 package ui;
 
 import java.util.Scanner;
-import util.InputValidators;
 import dao.StudentDAO;
 import model.Student;
 import util.UserGen;
@@ -17,22 +16,13 @@ public class AddStudents {
                 System.out.println("\n=== Add Student ===");
                 System.out.print("enter student name: ");
                 String name = scanner.nextLine();
-                name = InputValidators.validate(name);
-                if (name.equals("err")) {
-                    continue;
-                }
+               
                 System.out.print("enter major: ");
                 String major = scanner.nextLine();
-                major = InputValidators.validate(major);
-                if (major.equals("err")) {
-                    continue;
-                }
+                
                 System.out.print("enter year: ");
                 String year = scanner.nextLine();
-                year = InputValidators.validate(year);
-                if (year.equals("err")) {
-                    continue;
-                }
+            
 
                 int intyear = Integer.parseInt(year);
                 String ID = UserGen.generateShortId();
