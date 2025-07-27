@@ -1,3 +1,7 @@
-students.db
-sqlite.jar
-*/*.class
+
+*.txt
+**/*.db
+target/
+*/target/
+**/target/
+**/*.class

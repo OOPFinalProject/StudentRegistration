@@ -3,8 +3,8 @@ package dao;
 import java.sql.Connection;
 import java.sql.Statement;
 
-public class databaseselnitializer {
-    public static void intialize(){
+public class DatabaseInitializer {
+    public static void initialize(){
         try(Connection conn =DBConnection.getConnection();
         Statement stmt= conn.createStatement()){
             String studentsTable= """
@@ -50,7 +50,7 @@ public class databaseselnitializer {
                 
         }
         catch(Exception e){
-            e.printStackTrace();
+            e.getMessage();
         }
     }
 }
