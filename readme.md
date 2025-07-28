@@ -16,7 +16,7 @@ It also has Logging feature which creates logs of registrations into a text file
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/OOPFinalProject/StudentRegistration.git
    cd StudentRegistration
    ```
 
@@ -47,7 +47,7 @@ The application stores data in an SQLite database file in the project directory.
 - **[Hamza Mohammed]** - Project Lead & Developer (overall, and minor fixes, )
 - **[Abenezer Maru]** - Database (Create the Database and Initializer)
 - **[Nahot Haile ]** - DAO Layer (Functions for Database Operation)
-- **[Haile Abateneh]** - CLI layer 
-- **[Nebiyu Samuel]** - CLI Layer
+- **[Haile Abateneh]** - UI layer 
+- **[Nebiyu Samuel]** - UI Layer
 
 
