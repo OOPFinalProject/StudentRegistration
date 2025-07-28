@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import ui.MainMenu;
 import model.Student;
+import dao.RegistrationDAO;
 import util.Logger;
 import interfaces.Loggable;
 import model.Course;
@@ -179,6 +180,7 @@ class Exporter {
     void show() {
         while (true) {
             System.out.println("1. Export All Students  ");
+            System.out.println("2. Export Registrations By Course  ");
             System.out.println("0. Back to Main menu ");
             System.out.print("Enter choice: ");
             String choice = scanner.nextLine().trim();
@@ -189,6 +191,11 @@ class Exporter {
                 case "1":
                     exportStud();
                     break;
+                
+                case "2":
+                    exportReg();
+                    break;
+                
 
                 default:
                     System.err.println("invalid input");
@@ -216,6 +223,35 @@ class Exporter {
               
             System.out.println("exported to students.txt");
 
+        }
+
+    }
+    public void exportReg(){
+        Loggable logger = new Logger();
+        System.out.println("0. Back to Main menu ");
+        System.out.print("Enter CourseId: ");
+        String choice = scanner.nextLine().trim();
+        switch (choice) {
+            case "0":
+                new MainMenu().show();
+                break;
+            default:
+                ArrayList<String> regs = RegistrationDAO.getEnrolledStudents(choice);
+                for (int i=0; i<regs.size();i++) {
+                    String entry = regs.get(i);
+                    try {
+                        logger.log(entry, choice+ "-registrations");
+                    } catch (IllegalStateException e) {
+                        System.out.println("Error: Scanner is closed.");
+                        new MainMenu().show();
+                    } catch (Exception e) {
+                        System.out.println("An unexpected error occurred: " + e.getMessage());
+                        new MainMenu().show();
+                    } 
+                      
+                    System.out.println("exported to registrations.txt");
+                }
+                break;
         }
 
     }

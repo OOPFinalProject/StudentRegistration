@@ -1,5 +1,6 @@
 package ui;
 import ui.MainMenu;
+import dao.DatabaseInitializer;
 
 public class Main {
     public static void main(String[] args) {

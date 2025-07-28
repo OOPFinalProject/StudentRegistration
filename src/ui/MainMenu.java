@@ -3,6 +3,7 @@ import java.util.Scanner;
 import ui.addStudents;
 import ui.addCourses;
 import ui.RegisterStudents;
+import ui.databaseExplorer;
 
 public class MainMenu{
     private Scanner scanner = new Scanner(System.in);
@@ -29,7 +30,9 @@ public class MainMenu{
                 case "3":
                     new RegisterStudents().show();
                     break;
-
+                case "4":
+                    new databaseExplorer().show();
+                    break;
                 default:
                     System.out.println("'Invalid Input'");
 
