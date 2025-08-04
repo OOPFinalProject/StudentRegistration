@@ -271,7 +271,7 @@ class Reader {
             logger.read(fileName);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            e.getMessage();
         }
     }
 

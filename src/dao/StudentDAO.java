@@ -15,7 +15,7 @@ public class StudentDAO {
             stmt.setString(1, studentId);
             stmt.executeUpdate();
         } catch (Exception e) {
-            e.printStackTrace();
+            e.getMessage();
         }
     }
     public static void addStudent(Student student) throws customExceptions.StudentNotCreatedException   {

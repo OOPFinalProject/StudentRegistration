@@ -31,13 +31,13 @@ public class RegistrationService implements Registrable {
                 RegistrationDAO.register(studentId,courseId);
                 System.out.println("Student Registered!!!");
             }catch(customExceptions.AlreadyRegisteredException e){
-                e.printStackTrace();
+                e.getMessage();
             }
         }else{
             try{
                 throw new customExceptions.CourseLimitException("Credit hours reached limits!!");
             }catch(Exception e){
-                e.printStackTrace();
+                e.getMessage();
             }
         }
 

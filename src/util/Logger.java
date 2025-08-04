@@ -15,7 +15,7 @@ public class Logger implements Loggable {
             bw.newLine();
             bw.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            e.getMessage();
        
     }
 }
@@ -27,7 +27,7 @@ public class Logger implements Loggable {
                 System.out.println(line);  
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            e.getMessage();
         }
 
     }

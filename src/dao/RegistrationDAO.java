@@ -18,7 +18,7 @@ public class RegistrationDAO {
             pstmt.executeUpdate();
         }
         catch(Exception e){
-            throw new customExceptions.AlreadyRegisteredException("could not register, mayme this student has already registered");
+            throw new customExceptions.AlreadyRegisteredException("could not register, maybe this student has already registered");
 
         }
     }
