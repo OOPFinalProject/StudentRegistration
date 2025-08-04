@@ -28,10 +28,12 @@ public class DatabaseInitializer {
             String registrationTable = """
                 CREATE TABLE IF NOT EXISTS registration (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    student_id TEXT,
-                    course_id TEXT UNIQUE,
+                    student_id TEXT ,
+                    course_id TEXT ,
                     FOREIGN KEY (student_id) REFERENCES students(student_id) ON DELETE CASCADE ,
-                    FOREIGN KEY (course_id) REFERENCES courses(course_id)
+                    FOREIGN KEY (course_id) REFERENCES courses(course_id),
+                    UNIQUE (student_id, course_id)
+
                 );
             """;
 
@@ -41,7 +43,7 @@ public class DatabaseInitializer {
 
             System.out.println("✅ Database tables created.");
         } catch (Exception e) {
-            e.printStackTrace();
+            e.getMessage();
         }
     }
 }
