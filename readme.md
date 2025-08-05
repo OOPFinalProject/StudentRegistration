@@ -1,53 +1,75 @@
 # Student Registration System
 
-## Description
+A Java-based command-line application for managing students, courses, and their registrations using an SQLite database. The system allows users to register students (individually or in bulk), view course enrollments, and manage logs for tracking operations.
 
-The Student Registration System is a Java-based application that allows users to manage student records, courses, and course registrations. It provides functionalities to add students, add courses, register students for courses (individually or in bulk), and view registration information. The system uses an SQLite database for persistent storage and features a simple command-line interface.
-It also has Logging feature which creates logs of registrations into a text file
+## Features
+
+- Add, view, and manage students and courses
+- Register students to courses individually or by academic year
+- Persistent SQLite database integration
+- Logging system to track registration activities
+- Command-line interface for simple, fast operation
 
 ## Installation
 
 ### Prerequisites
 
-- Java 21 or newer (project uses Java 24 features)
-- Maven (for dependency management and building)
+- Java 21+ (Uses features up to Java 24)
+- Maven (for dependency management and running)
 
-### Steps
+### Setup Steps
 
-1. **Clone the repository:**
+1. Clone the repository
    ```bash
    git clone https://github.com/OOPFinalProject/StudentRegistration.git
    cd StudentRegistration
-   ```
+````
 
-2. **Build the project and Initialize the Database:**
+2. Build the project and initialize the database
+
    ```bash
    mvn compile -Pinit-db
    ```
 
-3. **Run the application:**
+3. Run the application
+
    ```bash
    mvn exec:java
    ```
 
 ## Usage
 
-After running the application, follow the on-screen prompts to:
+After running the application, follow the interactive CLI to:
 
-- Add new students and courses
-- Register students for courses (individually or by year)
-- View registered students and courses
-- create logs
-- read logs
+* Add students and courses
+* Register students for courses (individually/by year)
+* View registration data
+* Create and read logs
 
-The application stores data in an SQLite database file in the project directory.
+All data is saved in a local SQLite database file within the project directory.
 
-## Collaborators
+## Project Structure
 
-- **[Hamza Mohammed]** - Project Lead & Developer (overall, and minor fixes, )
-- **[Abenezer Maru]** - Database (Create the Database and Initializer)
-- **[Nahot Haile ]** - DAO Layer (Functions for Database Operation)
-- **[Haile Abateneh]** - UI layer 
-- **[Nebiyu Samuel]** - UI Layer
+```
+StudentRegistration/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/         → Application source code
+│   │   └── resources/    → SQL initialization scripts
+│
+├── logs/                 → Stores generated registration logs
+├── pom.xml               → Maven config file
+└── README.md             → Project documentation
+```
 
+## Contributors
 
+| Name                                                   | Role                                               |
+| ------------------------------------------------------ | -------------------------------------------------- |
+| [Hamza Mohammed](https://github.com/Hamiiz)            | Project Lead & Developer (architecture, bug fixes) |
+| [Abenezer Maru](https://github.com/azensso)            | Database Setup & Initialization                    |
+| [Nahot Haile](https://github.com/Nahot4)               | DAO Layer (Database access methods)                |
+| [Haile Abateneh](https://github.com/halazab)           | UI Layer Development                               |
+| [Nebiyu Samuel](https://github.com/charismatic-design) | UI Layer Development                               |
+git add
